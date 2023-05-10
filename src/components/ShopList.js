@@ -6,6 +6,7 @@ const ListContainer = styled.div`
   width: 85%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
   margin: auto;
   column-gap: 20px;
