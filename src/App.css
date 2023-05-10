@@ -1,3 +1,8 @@
+/* #root {
+  text-align: center;
+  padding: 300px;
+} */
+
 .App {
   text-align: center;
   margin: 0;
@@ -22,8 +27,16 @@
 ul, 
 li{
   list-style: none;
+  color: white;
 }
 
+a {
+  color: black;
+}
+
+hr {
+  border: 2px solid lightgray;
+}
 /* a {
   style
 } */
