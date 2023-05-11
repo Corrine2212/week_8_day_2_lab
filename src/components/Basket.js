@@ -30,7 +30,7 @@ const Items = styled.p`
 
 `
 
-const Basket = ({ items, basket }) => {
+const Basket = ({ basket, basketValue }) => {
 
   const basketItems = basket.map((item) => {
     const isInBasket = basket.includes(item);
@@ -42,7 +42,10 @@ const Basket = ({ items, basket }) => {
       <BasketHeader>Your Basket:</BasketHeader>
 
       <BasketContainer>
-          <Items>{basketItems}</Items>
+          <Items>
+            {basketItems}
+            <p className='basket-value'>Total Basket: £{basketValue}</p>
+          </Items>
       </BasketContainer>
 
     </>

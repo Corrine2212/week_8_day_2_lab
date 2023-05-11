@@ -15,10 +15,14 @@ const ShopContainer = () => {
     ];
 
     const [basket, setBasket] = useState([]);
+    const [basketValue, setBasketValue] = useState(0);
 
     const addToBasket = (item) => {
         const updatedBasket = [...basket, item];
+        let updatedBasketValue = basketValue;
+        updatedBasketValue += item.price;
         setBasket(updatedBasket);
+        setBasketValue(updatedBasketValue);
     };
 
     return (
@@ -26,7 +30,7 @@ const ShopContainer = () => {
             <NavBar />
             <Routes>
                 <Route path="/" element={<ShopList items={shopContainerItems} addToBasket={(item) => { addToBasket(item) }} />} />
-                <Route path="/basket" element={<Basket items={shopContainerItems} basket={basket} />} />
+                <Route path="/basket" element={<Basket items={shopContainerItems} basket={basket} basketValue={basketValue} />} />
             </Routes>
         </Router>
     );
